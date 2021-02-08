@@ -14,7 +14,13 @@ std::vector<std::vector<std::string>> CreateBoard(){
 	return board;
 }
 
-
+void TicTacToe::DisplayBoard(std::vector<std::vector<std::string>> board) {
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; col++)
+            std::cout<<board[i][j]<<" ";
+        std::cout << std::endl;
+    }
+}
 
 int main(){
 	std::vector<std::vector<std::string>> board=CreateBoard();
