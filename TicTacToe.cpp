@@ -14,9 +14,17 @@ std::vector<std::vector<std::string>> CreateBoard(){
 	return board;
 }
 
-
+void DisplayBoard(std::vector<std::vector<std::string>> board){
+	for(std::vector<std::vector<std::string>>::size_type i = 0; i<board.size(); i++){
+		for(std::vector<std::string>::size_type j = 0; j < board[i].size(); j++){
+			std::cout<<board[i][j]<<"   ";
+		}
+		std::cout<<std::endl;
+	}
+}
 
 int main(){
 	std::vector<std::vector<std::string>> board=CreateBoard();
+	DisplayBoard(board);
 	return 0;
 }
