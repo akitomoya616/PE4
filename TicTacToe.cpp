@@ -36,20 +36,23 @@ void PlaceMarker(int *player, Position new_position, std::vector<std::vector<std
 	
 }
 
-
+//Function to return the position that the player chooses
 Position GetPlayerChoice(std::vector<std::vector<std::string>> &board) {
     int row;
     int col;
+    //Keep iterating until we get a valid input
     while (1){
         std::cout << "Enter Choice:" << std::endl;
         std::cout << "Row: ";
         std::cin >> row;
         std::cout << "Col: ";
         std::cin >> col;
+	//If valid postion ie not already taken space
         if (board[row-1][col-1] != "⭕" && board[row-1][col-1] != "❌") {
             Position pos{row-1,col-1};
 	    return pos;
         }
+	//Invalid position means we try to get input again
         else 
             std::cout << "Invalid position!" << std::endl;
     }
