@@ -9,13 +9,14 @@ struct Position {
 	}
 };
 
-
+//create a board using a 2d vector, a vector that contains another vector which stores string values
 std::vector<std::vector<std::string>> CreateBoard(){
 	std::vector<std::vector<std::string>> board(3, std::vector<std::string> (3, "⬜"));
 	return board;
 }
 
 void DisplayBoard(std::vector<std::vector<std::string>> board) {
+	//print the vector in three lines to form a board
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++)
             std::cout<<board[i][j]<<" ";
@@ -25,6 +26,8 @@ void DisplayBoard(std::vector<std::vector<std::string>> board) {
 }
 
 void PlaceMarker(int *player, Position new_position, std::vector<std::vector<std::string>> &board){
+	//update board information based on the given position and the current player's pointer
+	//then switch to the next player
 	if(*player==0){
 		board[new_position.row][new_position.col]="⭕";
 		*player=1;
@@ -60,11 +63,14 @@ Position GetPlayerChoice(std::vector<std::vector<std::string>> &board) {
 
 
 int main(){
+	//initialize a board and print it on the screen
 	std::vector<std::vector<std::string>> board=CreateBoard();
 	DisplayBoard(board);
+	//initialize a position, player number, and turn counter
 	Position new_position;
 	int player=0;
 	int turn=0;
+	//do the following steps for each player for 9 turns until the board is full
 	while(turn<9){
 		new_position=GetPlayerChoice(board);
 		PlaceMarker(&player,new_position,board);
