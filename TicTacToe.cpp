@@ -17,7 +17,7 @@ std::vector<std::vector<std::string>> CreateBoard(){
 
 void DisplayBoard(std::vector<std::vector<std::string>> board) {
     for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; col++)
+        for(int j = 0; j < 3; j++)
             std::cout<<board[i][j]<<" ";
         std::cout << std::endl;
     }
@@ -36,7 +36,7 @@ void PlaceMarker(int *player, Position new_position, std::vector<std::vector<std
 	
 }
 
-Position GetPlayerChoice() {
+Position GetPlayerChoice(std::vector<std::vector<std::string>> &board) {
     int row;
     int col;
     while (1){
@@ -58,5 +58,14 @@ Position GetPlayerChoice() {
 int main(){
 	std::vector<std::vector<std::string>> board=CreateBoard();
 	DisplayBoard(board);
+	Position new_position;
+	int player=0;
+	int turn=0;
+	while(turn<9){
+		new_position=GetPlayerChoice(board);
+		PlaceMarker(&player,new_position,board);
+		DisplayBoard(board);
+		turn++;
+	}
 	return 0;
 }
