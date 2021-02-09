@@ -1,0 +1,62 @@
+peter@peter-virtual-machine:~/Desktop/PE4_G$ make
+g++ -std=c++17 -Wall TicTacToe.cpp -o main
+peter@peter-virtual-machine:~/Desktop/PE4_G$ ./main
+⬜ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 1 
+Col: 1
+⭕ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 1 
+Col: 2
+⭕ ❌ ⬜ 
+⬜ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 1
+Col: 3
+⭕ ❌ ⭕ 
+⬜ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 2
+Col: 1
+⭕ ❌ ⭕ 
+❌ ⬜ ⬜ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 2
+Col: 2
+⭕ ❌ ⭕ 
+❌ ⭕ ⬜ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 2
+Col: 3
+⭕ ❌ ⭕ 
+❌ ⭕ ❌ 
+⬜ ⬜ ⬜ 
+Enter Choice:
+Row: 3
+Col: 1
+⭕ ❌ ⭕ 
+❌ ⭕ ❌ 
+⭕ ⬜ ⬜ 
+Enter Choice:
+Row: 3
+Col: 2
+⭕ ❌ ⭕ 
+❌ ⭕ ❌ 
+⭕ ❌ ⬜ 
+Enter Choice:
+Row: 3
+Col: 3
+⭕ ❌ ⭕ 
+❌ ⭕ ❌ 
+⭕ ❌ ⭕ 
+peter@peter-virtual-machine:~/Desktop/PE4_G$ 
+
