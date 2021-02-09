@@ -36,7 +36,8 @@ void PlaceMarker(int *player, Position new_position, std::vector<std::vector<std
 	
 }
 
-Position GetPlayerChoice(std::vector<std::vector<std::string>> board) {
+
+Position GetPlayerChoice(std::vector<std::vector<std::string>> &board) {
     int row;
     int col;
     while (1){
@@ -58,5 +59,14 @@ Position GetPlayerChoice(std::vector<std::vector<std::string>> board) {
 int main(){
 	std::vector<std::vector<std::string>> board=CreateBoard();
 	DisplayBoard(board);
+	Position new_position;
+	int player=0;
+	int turn=0;
+	while(turn<9){
+		new_position=GetPlayerChoice(board);
+		PlaceMarker(&player,new_position,board);
+		DisplayBoard(board);
+		turn++;
+	}
 	return 0;
 }
