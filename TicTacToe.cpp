@@ -36,6 +36,7 @@ void PlaceMarker(int *player, Position new_position, std::vector<std::vector<std
 	
 }
 
+
 Position GetPlayerChoice(std::vector<std::vector<std::string>> &board) {
     int row;
     int col;
