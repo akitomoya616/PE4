@@ -24,13 +24,13 @@ void DisplayBoard(std::vector<std::vector<std::string>> board) {
 
 }
 
-void PlaceMarker(int *player, int *row, int *col, std::vector<std::vector<std::string>> &board){
+void PlaceMarker(int *player, Position new_position, std::vector<std::vector<std::string>> &board){
 	if(*player==0){
-		board[*row][*col]="⭕";
+		board[new_position.row][new_position.col]="⭕";
 		*player=1;
 	}
 	else{
-		board[*row][*col]="❌";
+		board[new_position.row][new_position.col]="❌";
 		*player=0;
 	}
 	
