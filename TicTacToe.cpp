@@ -14,15 +14,30 @@ std::vector<std::vector<std::string>> CreateBoard(){
 	return board;
 }
 
-void TicTacToe::DisplayBoard(std::vector<std::vector<std::string>> board) {
+
+void DisplayBoard(std::vector<std::vector<std::string>> board) {
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; col++)
             std::cout<<board[i][j]<<" ";
         std::cout << std::endl;
     }
+
+}
+
+void PlaceMarker(int *player, int *row, int *col, std::vector<std::vector<std::string>> &board){
+	if(*player==0){
+		board[*row][*col]="⭕";
+		*player=1;
+	}
+	else{
+		board[*row][*col]="❌";
+		*player=0;
+	}
+	
 }
 
 int main(){
 	std::vector<std::vector<std::string>> board=CreateBoard();
+	DisplayBoard(board);
 	return 0;
 }
